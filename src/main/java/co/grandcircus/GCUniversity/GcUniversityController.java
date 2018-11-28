@@ -15,6 +15,11 @@ public class GcUniversityController {
 	
 	}
 	
+	@RequestMapping
+	public ModelAndView login() {
+		return new ModelAndView("login");
+	}
+	
 	
 	
 	

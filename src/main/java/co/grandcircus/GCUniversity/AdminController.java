@@ -20,10 +20,10 @@ public class AdminController {
 	private AdminDao adminDao;
 	private CourseDao courseDao;
 
-	@RequestMapping("/adminlogin")
+	@RequestMapping("/admin")
 	public ModelAndView admin(@RequestParam(name = "username", required = true) String username, @RequestParam("password") String password,
 			HttpSession session, RedirectAttributes redir) {
-		    ModelAndView mv = new ModelAndView("adminlogin");
+		    ModelAndView mv = new ModelAndView("admin");
 
 		mv.addObject("username", adminDao.findAll());
 		return mv;
