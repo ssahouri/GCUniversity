@@ -16,8 +16,8 @@ public class Course {
 	private Long id;
 	private String name;
 	private String category;
-	@OneToMany(mappedBy = "enrollment")
-	private List<Enrollment> enrollments;
+	@OneToMany(mappedBy = "course")
+	public List<Enrollment> enrollments;
 
 	public List<Enrollment> getEnrollments() {
 		return enrollments;

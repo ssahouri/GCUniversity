@@ -26,7 +26,7 @@ public class Student extends User {
 	private String address;
 	private String phoneNumber;
 
-	@OneToMany(mappedBy = "enrollment")
+	@OneToMany(mappedBy = "student")
 	private Set<Enrollment> enrollments;
 
 	public Long getId() {
