@@ -1,13 +1,14 @@
 package co.grandcircus.GCUniversity.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
+
+@Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class User {
 	
@@ -21,6 +22,14 @@ public abstract class User {
 	private String lastName;
 	
 	public abstract boolean isAdmin();
+	
+	public User(Long id, String firstName, String lastName, String userName, String password) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.password = password;
+	}
 	
 	public Long getId() {
 		return id;
