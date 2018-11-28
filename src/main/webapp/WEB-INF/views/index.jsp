@@ -10,7 +10,7 @@
 	<h1>Welcome to GC University!</h1>
 
 	<p>
-		Are you an <a href="/adminlogin"> Admin</a> or <a href="/studentlogin">Student?</a>
+		<a href="/login"> Login Here!</a>
 	</p>
 
 </body>

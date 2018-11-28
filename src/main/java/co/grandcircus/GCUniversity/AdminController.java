@@ -18,10 +18,10 @@ public class AdminController {
 	@Autowired
 	private AdminDao adminDao;
 
-	@RequestMapping("/adminlogin")
+	@RequestMapping("/admin")
 	public ModelAndView admin(@RequestParam(name = "username", required = true) String username, @RequestParam("password") String password,
 			HttpSession session, RedirectAttributes redir) {
-		    ModelAndView mv = new ModelAndView("adminlogin");
+		    ModelAndView mv = new ModelAndView("admin");
 
 		mv.addObject("username", adminDao.findAll());
 		return mv;
