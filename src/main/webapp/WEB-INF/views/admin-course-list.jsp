@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hotels</title>
+<title>ADmin Course List</title>
 </head>
 <body>
 <h1>Course List</h1>
