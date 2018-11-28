@@ -11,12 +11,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import co.grandcircus.GCUniversity.entity.Admin;
 import co.grandcircus.GCUniversity.entity.AdminDao;
+import co.grandcircus.GCUniversity.entity.CourseDao;
 
 @Controller
 public class AdminController {
 
 	@Autowired
 	private AdminDao adminDao;
+	private CourseDao courseDao;
 
 	@RequestMapping("/adminlogin")
 	public ModelAndView admin(@RequestParam(name = "username", required = true) String username, @RequestParam("password") String password,
@@ -26,6 +28,15 @@ public class AdminController {
 		mv.addObject("username", adminDao.findAll());
 		return mv;
 
+	}
+	
+	@RequestMapping("/courselist")
+	public ModelAndView showCourses () {
+		    ModelAndView mv = new ModelAndView("admin-course-list");
+
+		mv.addObject("course", courseDao.findAll());
+		return mv;
+		
 	}
 
 }
