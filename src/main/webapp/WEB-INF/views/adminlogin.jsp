@@ -12,7 +12,7 @@
 <form action="/testmenu" method="post">
 		<p>
 			<label for="username">Username:</label> <input id="username"
-				name="username" value="${ param.username }" required minlength="2" />
+				name="username" value="${ username }" required minlength="2" />
 		</p>
 		<p>
 			<label for="password">Password:</label> <input id="password"
