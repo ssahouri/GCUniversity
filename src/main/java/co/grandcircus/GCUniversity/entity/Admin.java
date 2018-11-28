@@ -15,12 +15,6 @@ public class Admin extends User{
 	@Column
 	String password;
 	
-	
-	
-	
-	
-	
-	
 	public Long getId() {
 		return id;
 	}

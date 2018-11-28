@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import co.grandcircus.GCUniversity.entity.Admin;
-import dao.AdminDao;
+import co.grandcircus.GCUniversity.entity.AdminDao;
 
 @Controller
 public class AdminController {
@@ -21,7 +21,7 @@ public class AdminController {
 	@RequestMapping("/adminlogin")
 	public ModelAndView admin(@RequestParam(name = "username", required = true) String username, @RequestParam("password") String password,
 			HttpSession session, RedirectAttributes redir) {
-		    ModelAndView mv = new ModelAndView("hotelslist");
+		    ModelAndView mv = new ModelAndView("adminlogin");
 
 		mv.addObject("username", adminDao.findAll());
 		return mv;
